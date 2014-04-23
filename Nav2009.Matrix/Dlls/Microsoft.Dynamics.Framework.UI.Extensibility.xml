@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Dynamics.Framework.UI.Extensibility</name>
+	</assembly>
+	<members>
+		<member name="N:Microsoft.Dynamics.Framework.UI.Extensibility">
+			<summary>The <see cref="N:Microsoft.Dynamics.Framework.UI.Extensibility"></see> namespace contains types that define the model for creating RoleTailored client control add-ins for Microsoft Dynamics NAV 2009.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInEventHandler">
+			<summary>Specifies a control add-in event.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInExportAttribute">
+			<summary>Declares a class to be a control add-in that can be used in the RoleTailored client.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInExportAttribute.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInExportAttribute"></see> class.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInExportAttribute.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInExportAttribute"></see> class.</summary>
+			<param name="name">A <see cref="T:System.String"></see> that contains the control add-in name.</param>
+		</member>
+		<member name="P:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInExportAttribute.Name">
+			<summary>Gets the control add-in name.</summary>
+			<returns>A <see cref="T:System.String"></see> that contains the control add-in name.</returns>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddIn">
+			<summary>Defines the interface for the control add-in.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddIn.Initialize(Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite)">
+			<summary>Sets the <see cref="M:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddIn.Initialize(Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite)"></see> for the control add-in.</summary>
+			<param name="controlAddInSite">The <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddIn"></see> in which the control add-in runs.</param>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite">
+			<summary>Defines the interface that allows a control add-in to get information about the container of the add-in control.</summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.CaptionChanged">
+			<summary>Occurs when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Caption"></see> property has changed.</summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.EditableChanged">
+			<summary>Occurs when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Editable"></see> property has changed.</summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.EnabledChanged">
+			<summary>Occurs when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Enabled"></see> property has changed.</summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.StyleChanged">
+			<summary>Occurs when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Style"></see> property has changed.</summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.ValidationResultChanged">
+			<summary>Occurs when the site has validated the control add-in value. </summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.VisibleChanged">
+			<summary>Occurs when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Visible"></see> property has changed.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.SaveValue">
+			<summary>Tells the RoleTailored client to save the value of the control add-in. </summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.IEventControlAddInDefinition">
+			<summary>Base interface for a control add-in definition interface that defines a <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInEventHandler"></see> event.</summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.IEventControlAddInDefinition.ControlAddIn">
+			<summary><see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.IEventControlAddInDefinition"></see> event that invokes the OnControlAddIn trigger on the field of a RoleTailored client page.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.IObjectControlAddInDefinition">
+			<summary>Base interface for a control add-in definition interface that binds the control add-in with a <see cref="T:System.Object"></see> data type and raises a <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInEventHandler"></see> event.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.IStringControlAddInDefinition">
+			<summary>Base interface for a control add-in definition interface with a <see cref="T:System.String"></see> value type and a <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ControlAddInEventHandler"></see> event.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.IValueControlAddInDefinition`1">
+			<summary>Base interface for a control add-in definition that binds the control add-in with <see cref="System.String"></see> or <see cref="System.Object"></see> data types to the Microsoft Dynamics NAV database.</summary>
+		</member>
+		<member name="P:Microsoft.Dynamics.Framework.UI.Extensibility.IValueControlAddInDefinition`1.HasValueChanged">
+			<summary>Gets a value indicating whether the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IValueControlAddInDefinition`1.Value"></see> property has changed its value.</summary>
+			<returns>true if <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IValueControlAddInDefinition`1.Value"></see> property has changed its value; otherwise, false. The default is false.</returns>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.Style">
+			<summary>Defines the style enumeration for the control add-in as determined by the Style property of the RoleTailored client page control that is applied with the control add-in.</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.Style.Attention">
+			<summary>Attention</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.Style.Favorable">
+			<summary>Favorable</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.Style.None">
+			<summary>None</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.Style.Strong">
+			<summary>Strong</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.Style.Unfavorable">
+			<summary>Unfavorable</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationResult">
+			<summary>Defines the data for a validation result from the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite"></see> interface. This class cannot be inherited.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationResult.#ctor(Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState,System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationResult"></see> class.</summary>
+			<param name="validationState">A <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState"></see> for the validation result.</param>
+			<param name="validationStateText">A text message for the validation result.</param>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState">
+			<summary>Defines the state of a validation result.</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState.Error">
+			<summary>An error occurred in validation.</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState.Info">
+			<summary>The validation issues an informational message.</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState.Valid">
+			<summary>The validation succeeded.</summary>
+		</member>
+		<member name="F:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationState.Warning">
+			<summary>The validation state issued a warning message.</summary>
+		</member>
+		<member name="N:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms">
+			<summary>The <see cref="N:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms"></see> namespace contains types for creating RoleTailored client control add-ins that have a user interface that is based on <see cref="System.Window.Forms"></see>.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.IWinFormsControlAddIn">
+			<summary>Defines the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.IWinFormsControlAddIn"></see> interface.</summary>
+		</member>
+		<member name="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.IWinFormsControlAddIn.AllowCaptionControl">
+			<summary>Gets a value indicating whether the RoleTailored client displays a caption control for the control add-in. </summary>
+			<returns>true to display a caption control; otherwise, false to omit the caption control and use the available space for the entire control.</returns>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase">
+			<summary>Base class for a Windows Forms control add-in that binds <see cref="T:System.String"></see> type data with the Microsoft Dynamics NAV database and uses events to call the OnControlAddin trigger on RoleTailored client page controls.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase"></see> class. </summary>
+		</member>
+		<member name="E:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.ControlAddIn">
+			<summary>Invokes the OnControlAddIn trigger of the RoleTailored client page control on which the control add-in is applied.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.OnEditableChanged(System.Boolean)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Editable"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="editable">The new editable value.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.OnInitialize">
+			<summary>Called when <see cref="M:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddIn.Initialize(Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite)"></see> is initialized.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.RaiseControlAddInEvent(System.Int32,System.String)">
+			<summary>Raises the <see cref="E:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.ControlAddIn"></see> event.</summary>
+			<param name="index">Generic integer.</param>
+			<param name="data">Generic string.</param>
+		</member>
+		<member name="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.HasValueChanged">
+			<summary>Gets a value indicating whether the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.Value"></see> property has changed its value.</summary>
+			<returns>true if <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.StringControlAddInBase.Value"></see> property has changed its value; otherwise, false. The default is false.</returns>
+		</member>
+		<member name="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase">
+			<summary>Base class for a Window Forms control add-in as an alternative to the explicit implementation of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.IWinFormsControlAddIn"></see> interface.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase"></see> class. </summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.CreateControl">
+			<summary>Creates the Windows Forms control for the control add-in.</summary>
+			<returns>Returns the Windows Forms control.</returns>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Dispose">
+			<summary>Releases all resources used by the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase"></see>. </summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Dispose(System.Boolean)">
+			<summary>Releases the unmanaged resources used by the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase"></see> and optionally releases the managed resources.</summary>
+			<param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Finalize">
+			<summary>Finalizes an instance of the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase"></see> class.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Initialize(Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite)">
+			<summary>Sets the <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite"></see> for the control add-in.</summary>
+			<param name="controlAddInSite">The <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite"></see> in which the control add-in runs.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnCaptionChanged(System.String)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Caption"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="caption">A <see cref="T:System.String"></see> containing the new caption.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnEditableChanged(System.Boolean)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Editable"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="editable">The new editable value.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnEnabledChanged(System.Boolean)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Enabled"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="enabled">The new enabled value.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnInitialize">
+			<summary>Called when <see cref="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Initialize(Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite)"></see> is called.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnStyleChanged(Microsoft.Dynamics.Framework.UI.Extensibility.Style)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Style"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="style">A <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.Style"></see> containing the new style.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnValidationResultChanged(Microsoft.Dynamics.Framework.UI.Extensibility.ValidationResult)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.ValidationResult"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="validationResult">A <see cref="T:Microsoft.Dynamics.Framework.UI.Extensibility.ValidationResult"></see> that contains the new validation result.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.OnVisibleChanged(System.Boolean)">
+			<summary>Called when the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.IControlAddInSite.Visible"></see> property on the <see cref="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.Site"></see> property has changed.</summary>
+			<param name="visible">The new visible value.</param>
+		</member>
+		<member name="P:Microsoft.Dynamics.Framework.UI.Extensibility.WinForms.WinFormsControlAddInBase.AllowCaptionControl">
+			<summary>Gets a value indicating whether the RoleTailored client displays a caption control for the control add-in. </summary>
+			<returns>true to display a caption control; false tonot display the caption control and use available space for the entire Windows Forms control.</returns>
+		</member>
+	</members>
+</doc>
