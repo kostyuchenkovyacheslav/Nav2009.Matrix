@@ -14,6 +14,7 @@ using Microsoft.Dynamics.Framework.UI.Extensibility.WinForms;
 namespace Nav2009.Matrix
 {
     [ControlAddInExport("Nav2009.Matrix")]
+    // public token: 86ce8986b7a3f4a7
     public class Matrix : StringControlAddInBase, IValueControlAddInDefinition<string>
     {
 
